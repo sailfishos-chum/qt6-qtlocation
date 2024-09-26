@@ -11,12 +11,7 @@ Release: 2%{?dist}
 # Rest of the licenses are for Qt code in src/location and src/plugins
 License: LGPL-3.0-only OR GPL-3.0-only WITH Qt-GPL-exception-1.0
 Url:     http://www.qt.io
-
-%if 0%{?unstable}
-Source0: https://download.qt.io/development_releases/qt/%{majmin}/%{qt_version}/submodules/%{qt_module}-everywhere-src-%{qt_version}-%{prerelease}.tar.xz
-%else
-Source0: https://download.qt.io/official_releases/qt/%{majmin}/%{version}/submodules/%{qt_module}-everywhere-src-%{version}.tar.xz
-%endif
+Source0: %{name}-%{version}.tar.bz2
 
 # filter plugin/qml provides
 %global __provides_exclude_from ^(%{_qt6_archdatadir}/qml/.*\\.so|%{_qt6_plugindir}/.*\\.so)$
@@ -56,7 +51,7 @@ Requires: %{name}%{?_isa} = %{version}-%{release}
 %endif
 
 %prep
-%autosetup -n %{qt_module}-everywhere-src-%{qt_version}%{?unstable:-%{prerelease}} -p1
+%autosetup -n %{name}-%{version}/upstream -p1
 
 
 %build
