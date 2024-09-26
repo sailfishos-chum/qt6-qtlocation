@@ -23,7 +23,7 @@ Source0: https://download.qt.io/official_releases/qt/%{majmin}/%{version}/submod
 
 BuildRequires: cmake
 BuildRequires: gcc-c++
-BuildRequires: ninja-build
+BuildRequires: ninja
 BuildRequires: qt6-rpm-macros
 BuildRequires: qt6-qtbase-devel >= %{qt_version}
 BuildRequires: qt6-qtbase-private-devel
