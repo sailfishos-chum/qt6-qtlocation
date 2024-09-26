@@ -1,10 +1,7 @@
-
 %global qt_version 6.7.2
-%global qt_module qtlocation
-
 
 Summary: Qt6 - Location Libraries
-Name:    qt6-%{qt_module}
+Name:    qt6-qtlocation
 Version: 6.7.2
 Release: 2%{?dist}
 
