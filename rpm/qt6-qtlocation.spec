@@ -1,8 +1,8 @@
-%global qt_version 6.8.3
+%global qt_version 6.8.4
 
 Summary: Qt6 - Location Libraries
 Name:    qt6-qtlocation
-Version: 6.8.3
+Version: 6.8.4
 Release: 2%{?dist}
 
 # Rest of the licenses are for Qt code in src/location and src/plugins
